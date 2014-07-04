@@ -1,0 +1,7 @@
+﻿ - if exp sta else sta - parser & middleend
+ - for (xpr; xpr; xpr) sta
+ - arrays! pointers!
+ - _rdptr(), _stptr() - pointers & arrays
+ - pointers as parameters
+ - 2 byte cells :<
+ - done 4ever :3

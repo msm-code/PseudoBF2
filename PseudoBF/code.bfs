@@ -1,0 +1,7 @@
+﻿func main() {
+    var foo = 0;
+    while foo < 5 {
+        _echo(foo + '0');
+		foo = foo + 1;
+    }
+}

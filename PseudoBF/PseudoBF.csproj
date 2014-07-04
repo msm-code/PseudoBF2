@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4944EBDA-8FCE-4BFB-8038-3552C63A0C35}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PseudoBF</RootNamespace>
+    <AssemblyName>PseudoBF</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\..\..\..\..\Downloads\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Backend\Brainfuck\Assembler.cs" />
+    <Compile Include="Backend\Brainfuck\CodeGeneratorBase.cs" />
+    <Compile Include="Backend\Brainfuck\IBrainfuckWriter.cs" />
+    <Compile Include="Backend\Brainfuck\ILinker.cs" />
+    <Compile Include="Backend\Brainfuck\StandardCodeGenerator.cs" />
+    <Compile Include="Backend\Brainfuck\BrainfuckWriter.cs" />
+    <Compile Include="Backend\Brainfuck\ICodeGenerator.cs" />
+    <Compile Include="Backend\Brainfuck\LadderLinker.cs" />
+    <Compile Include="Debugger\ExecutorEngine.cs" />
+    <Compile Include="Debugger\ExecutorGui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Debugger\IExternalProvider.cs" />
+    <Compile Include="Debugger\OpcodeExecutor.cs" />
+    <Compile Include="Debugger\ProgramStack.cs" />
+    <Compile Include="Frontend\C\ClikeLexer.cs" />
+    <Compile Include="Frontend\C\ClikeParser.cs" />
+    <Compile Include="Frontend\C\Parser.cs" />
+    <Compile Include="Middleend\C\FunctionDecl.cs" />
+    <Compile Include="Middleend\C\SourceWriter.cs" />
+    <Compile Include="Middleend\C\Statements\Break.cs" />
+    <Compile Include="Middleend\C\Statements\Continue.cs" />
+    <Compile Include="Middleend\C\Statements\If.cs" />
+    <Compile Include="Middleend\C\Statements\Block.cs" />
+    <Compile Include="Middleend\C\Statements\Return.cs" />
+    <Compile Include="Middleend\C\Statements\StandaloneExpression.cs" />
+    <Compile Include="Middleend\StructureContext.cs" />
+    <Compile Include="Middleend\StructuredCodeVisitor.cs" />
+    <Compile Include="IChunk.cs" />
+    <Compile Include="CodeChunk.cs" />
+    <Compile Include="ExternalChunk.cs" />
+    <Compile Include="Middleend\C\Statements\FunctionCall.cs" />
+    <Compile Include="Middleend\C\Statements\IntVariable.cs" />
+    <Compile Include="Middleend\C\Statements\VariableDeclaration.cs" />
+    <Compile Include="IntermediateCode.cs" />
+    <Compile Include="Compiler.cs" />
+    <Compile Include="Middleend\C\FunctionDef.cs" />
+    <Compile Include="Middleend\C\IStatement.cs" />
+    <Compile Include="Middleend\C\Program.cs" />
+    <Compile Include="Middleend\C\Statements\Assignment.cs" />
+    <Compile Include="Middleend\C\IExpression.cs" />
+    <Compile Include="Middleend\C\Statements\Constant.cs" />
+    <Compile Include="Middleend\C\Statements\While.cs" />
+    <Compile Include="IAssembler.cs" />
+    <Compile Include="ICodeVisitor.cs" />
+    <Compile Include="IMiddleend.cs" />
+    <Compile Include="IParser.cs" />
+    <Compile Include="ISyntaxTree.cs" />
+    <Compile Include="Middleend\Core\CodeVisitor.cs" />
+    <Compile Include="Middleend\Core\StackFrame.cs" />
+    <Compile Include="Middleend\Core\CompilerEngine.cs" />
+    <Compile Include="Middleend\Core\ProgramDatabase.cs" />
+    <Compile Include="Opcode.cs" />
+    <Compile Include="OpcodeWriter.cs" />
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Debugger\ExecutorGui.resx">
+      <DependentUpon>ExecutorGui.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Frontend\C\Clike.g" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="code.bfs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="WhatToDo.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>REM Antlr3 $(ProjectDir)Frontend\C\Clike.g -o $(ProjectDir)Frontend\C</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
