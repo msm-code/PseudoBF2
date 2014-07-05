@@ -135,6 +135,9 @@ PseudoBF compiler can convert above code directly to brainf..k (creating this mo
 ]<]
 ```
 
+After executing above brainf..k code in any brainf..k interpreter, we get expected
+output, that is `012345`
+
 Improvements over PseudoBF1
 ---------------------------
 
