@@ -14,7 +14,7 @@ func print_digit(dig)
 
 func main() {
     var foo = 0;
-    while foo < 6 {
+    while foo < 5 {
         print_digit(foo);
         foo = foo + 1;
     }
@@ -156,8 +156,8 @@ func _and(a, b) { if !a return 0; if !b return 0; return 1; }
 func _or(a, b) { if a return 1; if b return 1; return 0; }
 func _lt(a, b) {
     while 1 {
-        if !a return 1;
         if !b return 0;
+        if !a return 1;
         a = a - 1; b = b - 1;
     }
 }
