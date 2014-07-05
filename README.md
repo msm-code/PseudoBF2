@@ -21,7 +21,7 @@ func main() {
 }
 ```
 
-PseudoBF compiler can convert above codedirectly to brainf..k (creating this monstrosity):
+PseudoBF compiler can convert above code directly to brainf..k (creating this monstrosity):
 
 ```
 +[>+<[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[
@@ -138,7 +138,7 @@ PseudoBF compiler can convert above codedirectly to brainf..k (creating this mon
 Improvements over PseudoBF1
 ---------------------------
 
-PseudoBF is very extensible, that is it builds on very small set of buuldins.
+PseudoBF is very extensible, that is it builds on very small set of builtins.
 In fact, most of above code is compiled subset of standard library:
 
 ```
