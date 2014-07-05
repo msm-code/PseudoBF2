@@ -4,9 +4,9 @@ PseudoBF2
 The Language
 ------------
 
-Complete rewrite of PseudoBF (which is previous version of this project) - https://github.com/msm-code/PseudoBF
+Complete rewrite of PseudoBF1 (previous version of this project) - https://github.com/msm-code/PseudoBF
 
-PseudoBF is simple high-level, C-like language:
+PseudoBF is simple, high-level, C-like language:
 
 ```
 func print_digit(dig)
@@ -14,14 +14,14 @@ func print_digit(dig)
 
 func main() {
     var foo = 0;
-    while foo < 5 {
+    while foo < 6 {
         print_digit(foo);
         foo = foo + 1;
     }
 }
 ```
 
-PseudoBF compiler can convert above code directly to brainf..k (creating this monstrosity):
+PseudoBF compiler can convert above code directly to brainf..k, creating this monstrosity:
 
 ```
 +[>+<[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[-[
@@ -135,7 +135,7 @@ PseudoBF compiler can convert above code directly to brainf..k (creating this mo
 ]<]
 ```
 
-After executing above brainf..k code in any brainf..k interpreter, we get expected
+After executing above brainf..k code in appropriate interpreter, we get expected
 output, that is `012345`
 
 Improvements over PseudoBF1
@@ -171,13 +171,13 @@ func _mul(a, b) {
 }
 ```
 
-Except _echo and _sub (substraction), every operator can and should be programmed in language itself.
+Except _echo and _sub (substraction), every operator in language can be programmed in language itself.
 
 Other improvements:
  - better designed and more extensible code (with intermediate code layer)
  - allows recursive functions (in PseudoBF1 every function was in fact a macro)
- - debuggability is really improved. Code can be introspected at intermediate level,
-    traced with graphical debugger, syntax tree can be dumped, and brainf..k output can be commented.
+ - really improved debugability. Code can be inspected as intermediate lanuage and
+   traced with graphical debugger, syntax tree can be dumped, and brainf..k output can be commented.
 
 Todo
 ----
