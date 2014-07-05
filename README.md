@@ -16,7 +16,7 @@ func main() {
     var foo = 0;
     while foo < 5 {
         print_digit(foo);
-		foo = foo + 1;
+        foo = foo + 1;
     }
 }
 ```
@@ -136,7 +136,7 @@ PseudoBF compiler can convert above code directly to brainf..k (creating this mo
 ```
 
 After executing above brainf..k code in any brainf..k interpreter, we get expected
-output, that is `012345`
+output, that is `01234`
 
 Improvements over PseudoBF1
 ---------------------------
